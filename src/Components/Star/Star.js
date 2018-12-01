@@ -9,7 +9,7 @@ class Star extends Component {
 
     return (
       <div className="star">
-        <div>
+        <div className='star-name'>
           {star.name}
           <img className="image" src={star.image} alt={star.name} />
         </div>

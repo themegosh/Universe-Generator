@@ -1,0 +1,10 @@
+[
+  {
+    "name": "Red Star",
+    "images": ["RedStar.svg"]
+  },
+  {
+    "name": "Yellow Star",
+    "images": ["YellowStar.svg"]
+  }
+]

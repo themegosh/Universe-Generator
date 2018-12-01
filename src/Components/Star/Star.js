@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import Planet from "./../Planet/Planet";
-import ReactSVG from "react-svg";
 import "./Star.scss";
 
 class Star extends Component {

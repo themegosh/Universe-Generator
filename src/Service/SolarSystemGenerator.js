@@ -7,12 +7,10 @@ export default class SolarSystemGenerator {
         const reqSvgs = require.context("./../Images", true, /\.svg$/);
         this.svgPaths = reqSvgs.keys();
         this.realSvgPaths = this.svgPaths.map(path => reqSvgs(path));
-
-        console.log("constructor", this.svgPaths);
     }
 
     getImgPath(type, name) {
-        console.log("generaImage", type, name);
+        //console.log("getImgPath", type, name);
         var key;
         for (key in this.svgPaths) {
             if (this.svgPaths[key].indexOf(`/${type}/${name}`) > -1) {

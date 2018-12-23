@@ -1,131 +1,88 @@
 [
-  {
-    "name": "Ammonia World",
-    "minDiameter": 500,
-    "maxDiameter": 500000,
-    "images": [
-      "GasGiantPlanet.svg",
-      "ToxicPlanet.svg"
-    ]
-  },
-  {
-    "name": "Barren World",
-    "images": [
-      "BarrenPlanet.svg"
-    ]
-  },
-  {
-    "name": "Bioluminescence World",
-    "images": [
-      "GasGiantPlanet.svg"
-    ]
-  },
-  {
-    "name": "Bog World",
-    "images": [
-      "BorealPlanet.svg"
-    ]
-  },
-  {
-    "name": "Boreal World",
-    "images": [
-      "BorealPlanet.svg"
-    ]
-  },
-  {
-    "name": "City World",
-    "images": [
-      "ContinentalPlanet.svg"
-    ]
-  },
-  {
-    "name": "Continental World",
-    "images": [
-      "ContinentalPlanet.svg"
-    ]
-  },
-  {
-    "name": "Crystal World",
-    "images": [
-      "ContinentalPlanet.svg"
-    ]
-  },
-  {
-    "name": "Desert World",
-    "images": [
-      "ContinentalPlanet.svg"
-    ]
-  },
-  {
-    "name": "Broken World",
-    "images": [
-      "BarrenPlanet.svg"
-    ]
-  },
-  {
-    "name": "Forest World",
-    "images": [
-      "BarrenPlanet.svg"
-    ]
-  },
-  {
-    "name": "Paradise World",
-    "images": [
-      "BarrenPlanet.svg"
-    ]
-  },
-  {
-    "name": "Ice World",
-    "images": [
-      "IcePlanet.svg"
-    ]
-  },
-  {
-    "name": "Methane World",
-    "images": [
-      "BarrenPlanet.svg"
-    ]
-  },
-  {
-    "name": "Molten World",
-    "images": [
-      "BorealPlanet.svg"
-    ]
-  },
-  {
-    "name": "Mycelium World",
-    "images": [
-      "BarrenPlanet.svg"
-    ]
-  },
-  {
-    "name": "Ocean World",
-    "images": [
-      "OceanPlanet.svg"
-    ]
-  },
-  {
-    "name": "Protoplanet",
-    "images": [
-      "BorealPlanet.svg"
-    ]
-  },
-  {
-    "name": "Toxic World",
-    "images": [
-      "BorealPlanet.svg"
-    ]
-  },
-  {
-    "name": "Tidally Locked World",
-    "images": [
-      "BorealPlanet.svg"
-    ]
-  },
-  {
-    "name": "Tropical World",
-    "images": [
-      "BorealPlanet.svg"
-    ]
-  }
+    {
+        "name": "Ammonia World",
+        "minDiameter": 500,
+        "maxDiameter": 500000,
+        "images": ["GasGiantPlanet.svg", "ToxicPlanet.svg"]
+    },
+    {
+        "name": "Barren World",
+        "images": ["BarrenPlanet.svg"]
+    },
+    {
+        "name": "Bioluminescence World",
+        "images": ["GasGiantPlanet.svg"]
+    },
+    {
+        "name": "Bog World",
+        "images": ["BorealPlanet.svg"]
+    },
+    {
+        "name": "Boreal World",
+        "images": ["BorealPlanet.svg"]
+    },
+    {
+        "name": "City World",
+        "images": ["ContinentalPlanet.svg"]
+    },
+    {
+        "name": "Continental World",
+        "images": ["ContinentalPlanet.svg"]
+    },
+    {
+        "name": "Crystal World",
+        "images": ["ContinentalPlanet.svg"]
+    },
+    {
+        "name": "Desert World",
+        "images": ["ContinentalPlanet.svg"]
+    },
+    {
+        "name": "Broken World",
+        "images": ["BarrenPlanet.svg"]
+    },
+    {
+        "name": "Forest World",
+        "images": ["BarrenPlanet.svg"]
+    },
+    {
+        "name": "Paradise World",
+        "images": ["BarrenPlanet.svg"]
+    },
+    {
+        "name": "Ice World",
+        "images": ["IcePlanet.svg"]
+    },
+    {
+        "name": "Methane World",
+        "images": ["BarrenPlanet.svg"]
+    },
+    {
+        "name": "Molten World",
+        "images": ["BorealPlanet.svg"]
+    },
+    {
+        "name": "Mycelium World",
+        "images": ["BarrenPlanet.svg"]
+    },
+    {
+        "name": "Ocean World",
+        "images": ["OceanPlanet.svg"]
+    },
+    {
+        "name": "Protoplanet",
+        "images": ["BorealPlanet.svg"]
+    },
+    {
+        "name": "Toxic World",
+        "images": ["BorealPlanet.svg"]
+    },
+    {
+        "name": "Tidally Locked World",
+        "images": ["BorealPlanet.svg"]
+    },
+    {
+        "name": "Tropical World",
+        "images": ["BorealPlanet.svg"]
+    }
 ]

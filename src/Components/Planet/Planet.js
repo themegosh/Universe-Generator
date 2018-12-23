@@ -2,26 +2,30 @@ import React, { Component } from "react";
 import "./Planet.scss";
 
 class Planet extends Component {
-  render() {
-    let planet = this.props.planet;
-    var divStyle = {
-      transform: `rotate(${planet.rotation}deg)`,
-      width: `${planet.diameter * 8}px`
-    };
-    
 
-    return (
-      <div className="planet">
-        {planet.name}
-        <img src={planet.image} style={divStyle} className='image' alt={planet.name}/>
-        <div className="planetType">Planet Type: {planet.planetType}</div>
-        <div className="planetMass">Gravity: {planet.gravity}</div>
-        <div className="planetMass">Days: {planet.days}</div>
-        <div className="planetMass">Year: {planet.year}</div>
-        <div className="planetMass">Diameter: {planet.diameter}</div>
-      </div>
-    );
-  }
+    render() {
+        let planet = this.props.planet;
+        var planetImgStyle = {
+          transform: `rotate(${planet.rotation}deg)`,
+          width: `${planet.diameter * 8}px`
+        };
+        return (
+            <div className="planet">
+                {planet.name}
+                <img
+                    src={planet.image}
+                    className="image"
+                    alt={planet.name}
+                    style={planetImgStyle}
+                />
+                <div className="planetType">Planet Type: {planet.planetType}</div>
+                <div className="planetMass">Gravity: {planet.gravity}</div>
+                <div className="planetMass">Days: {planet.days}</div>
+                <div className="planetMass">Year: {planet.year}</div>
+                <div className="planetMass">Diameter: {planet.diameter}</div>
+            </div>
+        );
+    }
 }
 
 export default Planet;

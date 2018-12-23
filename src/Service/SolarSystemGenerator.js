@@ -38,7 +38,8 @@ export default class SolarSystemGenerator {
         this.getImgPath('Planets', aPlanet.images[Math.floor(Math.random() * (aPlanet.images.length - 1))]),
       gravity: Math.ceil(Math.floor(Math.random() * (100 - 1) + 1) / 10) * 10,
       mass: Math.ceil(Math.floor(Math.random() * (400 - 1) + 1) / 10) * 10,
-      diameter: Math.ceil(Math.floor(Math.random() * (100 - 1) + 1) / 10) * 10
+      diameter: Math.ceil(Math.floor(Math.random() * (100 - 1) + 1) / 10) * 10,
+      rotation: Math.ceil(Math.floor(Math.random() * (0-25) + (0)))
     };
   }
 

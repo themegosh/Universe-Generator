@@ -9,7 +9,6 @@ class Star extends Component {
         return (
             <div className="star">
                 <div className="star-name">
-                    {star.name}
                     <img className="image" src={star.image} alt={star.name} />
                 </div>
                 {star.planets.map((planet, key) => {

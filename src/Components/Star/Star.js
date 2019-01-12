@@ -5,7 +5,7 @@ class Star extends Component {
     render() {
         let star = this.props.star;
         var starImgStyle = {
-            width: `${star.diameter * 0.25}em`,
+            width: `${star.diameter}vw`,
             filter: `drop-shadow(0px 0px 100px ${star.outerGlow10010})`
         };
 

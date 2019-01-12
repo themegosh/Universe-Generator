@@ -34,7 +34,7 @@ export default class SolarSystemGenerator {
             image: this.getImgPath("Planets", aPlanet.images[Math.floor(Math.random() * (aPlanet.images.length - 1))]),
             gravity: Math.ceil(Math.floor(Math.random() * (100 - 1) + 1) / 10) * 10,
             mass: Math.ceil(Math.floor(Math.random() * (400 - 1) + 1) / 10) * 10,
-            diameter: Math.ceil(Math.floor(Math.random() * (100 - 1) + 1) / 10) * 10,
+            diameter: Math.ceil(Math.floor(Math.random() * 30000) + 15000),
             rotation: Math.ceil(Math.floor(Math.random() * (0 - 25) + 0))
         };
     }
@@ -56,7 +56,7 @@ export default class SolarSystemGenerator {
             outerGlow5020: aStar.outerGlow5020,
             planets: planets,
             image: this.getImgPath("Stars", aStar.images[Math.floor(Math.random() * (aStar.images.length - 1))]),
-            diameter: Math.ceil(Math.floor(Math.random() * (100 - 1) + 1) / 10) * 20
+            diameter: Math.ceil(Math.floor(Math.random() * 20) + 20)
         };
     }
 

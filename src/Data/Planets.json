@@ -2,6 +2,7 @@
     {
         "name": "Cold Gas Giant",
         "images": ["ColdGasGiantNOG-01.svg"],
-        "atmosphereColor": "#1baddb"
+        "atmosphereColor": "#1baddb",
+        "surfaces": ["RedShape.svg"]
     }
 ]

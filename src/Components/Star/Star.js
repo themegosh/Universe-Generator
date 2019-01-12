@@ -10,7 +10,7 @@ class Star extends Component {
         };
 
         return (
-            <div className="star">
+            <div className="planet-wrapper star">
                 <div className="star-name">
                     <img className="image" src={star.image} alt={star.name} style={starImgStyle} />
                 </div>

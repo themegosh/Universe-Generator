@@ -1,7 +1,24 @@
-.planet {
-    font-size:10px;
-
-    .image {
+.planet-wrapper {
+    .gradient-wrapper {
+        animation: scaling 1s;
+        margin: 0 auto;
     }
+    .surface-wrapper {
+        overflow: hidden;
+        .surface {
+            animation: surfaceanimation 1s;
 
+            @keyframes surfaceanimation {
+                0% {
+                    left: 0;
+                }
+                10% {
+                    left: 50%;
+                }
+                100% {
+                    left: 10%;
+                }
+            }
+        }
+    }
 }

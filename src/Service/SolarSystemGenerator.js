@@ -32,6 +32,10 @@ export default class SolarSystemGenerator {
             year: Math.floor(Math.random() * (10 - 1) + 60),
             days: Math.floor(Math.random() * (50 - 1) + 15),
             image: this.getImgPath("Planets", aPlanet.images[Math.floor(Math.random() * (aPlanet.images.length - 1))]),
+            surface: this.getImgPath(
+                "Surfaces",
+                aPlanet.surfaces[Math.floor(Math.random() * (aPlanet.surfaces.length - 1))]
+            ),
             gravity: Math.ceil(Math.floor(Math.random() * (100 - 1) + 1) / 10) * 10,
             mass: Math.ceil(Math.floor(Math.random() * (400 - 1) + 1) / 10) * 10,
             diameter: Math.ceil(Math.floor(Math.random() * 30000) + 15000),

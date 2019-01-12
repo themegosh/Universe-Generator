@@ -3,6 +3,7 @@ import "./SolarSystem.scss";
 import SolarSystemGenerator from "./../../Service/SolarSystemGenerator";
 import Star from "./../Star/Star";
 import Planet from "./../Planet/Planet";
+import FancyButton from "./../FancyButton/FancyButton";
 
 class SolarSystem extends Component {
     constructor(props) {
@@ -24,9 +25,7 @@ class SolarSystem extends Component {
         if (this.state.star) {
             return (
                 <div className="solar-system">
-                    <button type="button" className="fancy-button" onClick={this.generateSolarSystem}>
-                        Regenerate
-                    </button>
+                    <FancyButton onClick={this.generateSolarSystem}>Regenerate</FancyButton>
                     <Star star={this.state.star} />
 
                     {this.state.star.planets.map((planet, key) => {
@@ -38,9 +37,7 @@ class SolarSystem extends Component {
             return (
                 <div className="solar-system">
                     <h2>Hey, want a Solar System?</h2>
-                    <button type="button" className="fancy-button" onClick={this.generateSolarSystem}>
-                        Generate
-                    </button>
+                    <FancyButton onClick={this.generateSolarSystem}>Regenerate</FancyButton>
                 </div>
             );
         }

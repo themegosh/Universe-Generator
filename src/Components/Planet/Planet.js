@@ -7,8 +7,8 @@ class Planet extends Component {
         let planet = this.props.planet;
         let planetSize = {
             width: `${planet.diameter / 1000}vw`,
-            height: `${planet.diameter / 1000}vw`,
-            transform: `rotate(${planet.rotation}deg)`
+            height: `${planet.diameter / 1000}vw`
+            //transform: `rotate(${planet.rotation}deg)`
             //filter: `drop-shadow(0px 0px 10px ${planet.atmosphereColor})`
         };
         return (
@@ -31,17 +31,30 @@ class Planet extends Component {
                 </div>
                 <div className="outer-glow-wrapper">
                     {planet.outerGlows.map((glow, index) => {
+                        let glowMultiplier = (index + 1) * 5 + 10;
                         let glowStyle = {
-                            color: glow
+                            filter: `drop-shadow(0px 0px ${glowMultiplier}px ${glow})`
                         };
                         return <div className={`outer-glow glow-${index}`} key={index} style={glowStyle} />;
                     })}
+                </div>
+                <div className="surface-wrapper">
+                    <ReactSVG src={planet.surfaceImage} className="surface-image" />
+                    <div className="inner-glow-wrapper">
+                        {planet.innerGlows.map((glow, index) => {
+                            let innerGlowStyle = {
+                                backgroundColor: glow
+                            };
+                            return <div className="inner-glow" style={innerGlowStyle} key={index} />;
+                        })}
+                    </div>
                     <div className="inner-layer-wrapper">
                         {planet.innerLayers.map((layer, index) => {
                             let innerLayerStyle = {
                                 fill: layer.color,
-                                animationDuration: layer.duration,
-                                zIndex: index
+                                animationDuration: `${layer.duration}s`,
+                                zIndex: index,
+                                width: layer.width
                             };
                             return (
                                 <ReactSVG
@@ -53,24 +66,6 @@ class Planet extends Component {
                             );
                         })}
                     </div>
-                    {/* <div className="gradient third surface-wrapper" style={planetStyle}>
-                        <div className="surface">
-                            {planet.innerLayer.map((surface, index) => {
-                                let svgStyle = {
-                                    fill: surface.color,
-                                    zIndex: index
-                                };
-                                return (
-                                    <ReactSVG
-                                        className={`level-${index}`}
-                                        src={surface.image}
-                                        style={svgStyle}
-                                        key={index}
-                                    />
-                                );
-                            })}
-                        </div>
-                    </div> */}
                 </div>
             </div>
         );

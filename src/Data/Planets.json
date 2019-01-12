@@ -3,6 +3,14 @@
         "name": "Cold Gas Giant",
         "images": ["ColdGasGiantNOG-01.svg"],
         "atmosphereColor": "#1baddb",
-        "surfaces": ["Cloud1.svg"]
+        "surfaces": [
+            "cloud1.svg",
+            "cloud2.svg",
+            "cloud3.svg",
+            "cloud4.svg",
+            "cloud5.svg",
+            "cloud6.svg",
+            "cloudwrap1.svg"
+        ]
     }
 ]

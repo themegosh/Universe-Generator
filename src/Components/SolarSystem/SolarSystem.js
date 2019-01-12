@@ -10,6 +10,7 @@ class SolarSystem extends Component {
         this.state = { star: null };
 
         this.generateSolarSystem = this.generateSolarSystem.bind(this);
+        this.generateSolarSystem();
     }
 
     generateSolarSystem(e) {
@@ -23,11 +24,14 @@ class SolarSystem extends Component {
         if (this.state.star) {
             return (
                 <div className="solar-system">
+                    <button type="button" className="fancy-button" onClick={this.generateSolarSystem}>
+                        Regenerate
+                    </button>
                     <Star star={this.state.star} />
-                    
-                {this.state.star.planets.map((planet, key) => {
-                    return <Planet planet={planet} key={key} />;
-                })}
+
+                    {this.state.star.planets.map((planet, key) => {
+                        return <Planet planet={planet} key={key} />;
+                    })}
                 </div>
             );
         } else {

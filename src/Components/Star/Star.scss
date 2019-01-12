@@ -1,5 +1,4 @@
 .star {
-
     display: flex;
     flex-direction: row;
     margin: auto;
@@ -7,15 +6,13 @@
     align-items: center;
     justify-content: center;
 
-
     .star-name {
         font-size: 2vw;
     }
 }
 
-@media(max-width: 800px) {
+@media (max-width: 800px) {
     .star {
-        
-    flex-direction: column;
+        flex-direction: column;
     }
 }

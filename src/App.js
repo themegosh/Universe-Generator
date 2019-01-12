@@ -11,7 +11,7 @@ class App extends Component {
         return (
             <div className="App">
                 <SolarSystem />
-                <div class="starfield" id="starset1" style={starFieldStyle} />
+                <div className="starfield" id="starset1" style={starFieldStyle} />
             </div>
         );
     }

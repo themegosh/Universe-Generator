@@ -11,6 +11,8 @@ class SolarSystem extends Component {
         this.state = { star: null };
 
         this.generateSolarSystem = this.generateSolarSystem.bind(this);
+    }
+    componentDidMount() {
         this.generateSolarSystem();
     }
 

@@ -5,13 +5,17 @@
     }
     .surface-wrapper {
         overflow: hidden;
-        .surface {
-            .first {
-                animation: surfaceanimation 7s infinite;
-                position: absolute;
-                fill: green;
 
-                @keyframes surfaceanimation {
+        .surface {
+            div[class^="level-"],
+            div[class*=" level-"] {
+                position: absolute;
+            }
+
+            .level-0 {
+                animation: surfaceanimation0 7s infinite;
+
+                @keyframes surfaceanimation0 {
                     0% {
                         transform: translateX(-150%);
                     }
@@ -20,17 +24,28 @@
                     }
                 }
             }
-            .second {
-                position: absolute;
-                fill: purple;
-                animation: secondsurfaceanimation 10s infinite;
 
-                @keyframes secondsurfaceanimation {
+            .level-1 {
+                animation: surfaceanimation1 5s infinite;
+
+                @keyframes surfaceanimation1 {
                     0% {
-                        transform: translateX(-100%);
+                        transform: translateX(-150%);
                     }
                     100% {
-                        transform: translateX(100%);
+                        transform: translateX(50%);
+                    }
+                }
+            }
+            .level-2 {
+                animation: surfaceanimation2 3s infinite;
+
+                @keyframes surfaceanimation2 {
+                    0% {
+                        transform: translateX(-150%);
+                    }
+                    100% {
+                        transform: translateX(50%);
                     }
                 }
             }

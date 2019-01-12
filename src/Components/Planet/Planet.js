@@ -21,10 +21,20 @@ class Planet extends Component {
                     <div className="gradient second" style={planetStyle} />
                     <div className="gradient third surface-wrapper" style={planetStyle}>
                         <div className="surface">
-                            <ReactSVG className="first" src={planet.surface} />
-                            <ReactSVG className="second" src={planet.surface} />
-                            {/* <img src={planet.surface} className="first" alt={planet.name} />
-                            <img src={planet.surface} className="second" alt={planet.name} /> */}
+                            {planet.surfaces.map((surface, index) => {
+                                let svgStyle = {
+                                    fill: surface.color,
+                                    zIndex: index
+                                };
+                                return (
+                                    <ReactSVG
+                                        className={`level-${index}`}
+                                        src={surface.image}
+                                        style={svgStyle}
+                                        key={index}
+                                    />
+                                );
+                            })}
                         </div>
                     </div>
                 </div>

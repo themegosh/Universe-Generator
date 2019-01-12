@@ -7,7 +7,7 @@ class Planet extends Component {
         var planetImgStyle = {
             transform: `rotate(${planet.rotation}deg)`,
             width: `${planet.diameter * 0.3}em`,
-            filter: `drop-shadow(0px 0px 10px ${planet.atmosphereColor})`,
+            filter: `drop-shadow(0px 0px 10px ${planet.atmosphereColor})`
         };
         return (
             <div className="planet">

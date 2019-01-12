@@ -26,7 +26,7 @@ export default class SolarSystemGenerator {
 
         return {
             name: aPlanet.name,
-            surfaceImage: aPlanet.surfaceImage,
+            surfaceImage: this.getImgPath("Planets", aPlanet.surfaceImage),
             innerGlows: aPlanet.innerGlows.slice(),
             innerLayers: aPlanet.innerLayers.map(layer => {
                 return {

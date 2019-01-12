@@ -19,7 +19,8 @@ class Planet extends Component {
                     <div className="gradient first" style={planetStyle} />
                     <div className="gradient second" style={planetStyle} />
                     <div className="gradient third surface-wrapper" style={planetStyle}>
-                        <img src={planet.surface} className="surface" alt={planet.name} />
+                        <img src={planet.surface} className="first-surface" alt={planet.name} />
+                        <img src={planet.surface} className="second-surface" alt={planet.name} />
                     </div>
                 </div>
                 {/* <img src={planet.image} className="image" alt={planet.name} style={planetImgStyle} /> */}

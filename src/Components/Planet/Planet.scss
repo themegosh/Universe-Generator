@@ -5,18 +5,27 @@
     }
     .surface-wrapper {
         overflow: hidden;
-        .surface {
-            animation: surfaceanimation 1s;
+        .first-surface {
+            animation: surfaceanimation 3s infinite;
 
             @keyframes surfaceanimation {
                 0% {
-                    left: 0;
-                }
-                10% {
-                    left: 50%;
+                    transform: translateX(-100%);
                 }
                 100% {
-                    left: 10%;
+                    transform: translateX(100%);
+                }
+            }
+        }
+        .second-surface {
+            animation: secondsurfaceanimation 4s infinite;
+
+            @keyframes secondsurfaceanimation {
+                0% {
+                    transform: translateX(-200%);
+                }
+                100% {
+                    transform: translateX(100%);
                 }
             }
         }

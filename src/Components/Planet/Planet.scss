@@ -9,6 +9,7 @@
             .first {
                 animation: surfaceanimation 7s infinite;
                 position: absolute;
+                fill: green;
 
                 @keyframes surfaceanimation {
                     0% {
@@ -21,6 +22,7 @@
             }
             .second {
                 position: absolute;
+                fill: purple;
                 animation: secondsurfaceanimation 10s infinite;
 
                 @keyframes secondsurfaceanimation {

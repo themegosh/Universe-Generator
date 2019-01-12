@@ -54,6 +54,8 @@ export default class SolarSystemGenerator {
 
         return {
             name: aStar.name,
+            outerGlow10010: aStar.outerGlow10010,
+            innerGlow: aStar.innerGlow,
             planets: planets,
             image: this.getImgPath("Stars", aStar.images[Math.floor(Math.random() * (aStar.images.length - 1))]),
             diameter: Math.ceil(Math.floor(Math.random() * (100 - 1) + 1) / 10) * 20,

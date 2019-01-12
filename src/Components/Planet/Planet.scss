@@ -13,11 +13,12 @@
             }
 
             .level-0 {
-                animation: surfaceanimation0 7s infinite;
+                animation: surfaceanimation0 17s linear infinite;
+                width: 150%;
 
                 @keyframes surfaceanimation0 {
                     0% {
-                        transform: translateX(-150%);
+                        transform: translateX(-100%);
                     }
                     100% {
                         transform: translateX(50%);
@@ -26,11 +27,12 @@
             }
 
             .level-1 {
-                animation: surfaceanimation1 5s infinite;
+                animation: surfaceanimation1 20s linear infinite;
+                width: 150%;
 
                 @keyframes surfaceanimation1 {
                     0% {
-                        transform: translateX(-150%);
+                        transform: translateX(-200%);
                     }
                     100% {
                         transform: translateX(50%);
@@ -38,11 +40,12 @@
                 }
             }
             .level-2 {
-                animation: surfaceanimation2 3s infinite;
+                animation: surfaceanimation2 25s linear infinite;
+                width: 350%;
 
                 @keyframes surfaceanimation2 {
                     0% {
-                        transform: translateX(-150%);
+                        transform: translateX(-100%);
                     }
                     100% {
                         transform: translateX(50%);

@@ -6,15 +6,15 @@
         "surfaces": [
             {
                 "image": "cloud1.svg",
-                "color": "#fff"
+                "color": "#3399ff"
             },
             {
                 "image": "cloud2.svg",
-                "color": "#fff"
+                "color": "#66cccc"
             },
             {
-                "image": "cloud3.svg",
-                "color": "#fff"
+                "image": "cloudwrap1.svg",
+                "color": "#fafafa"
             }
         ]
     }

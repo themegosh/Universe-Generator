@@ -26,17 +26,26 @@ export default class SolarSystemGenerator {
 
         return {
             name: aPlanet.name,
-            atmosphereColor: aPlanet.atmosphereColor,
+            surfaceImage: aPlanet.surfaceImage,
+            innerGlows: aPlanet.innerGlows.slice(),
+            innerLayers: aPlanet.innerLayers.map(layer => {
+                return {
+                    image: this.getImgPath("InnerLayers", layer.image),
+                    color: layer.color,
+                    duration: layer.duration
+                };
+            }),
+            outerGlows: aPlanet.outerGlows.slice(),
+            outerLayers: aPlanet.outerLayers.map(layer => {
+                return {
+                    image: this.getImgPath("OuterLayers", layer.image),
+                    color: layer.color,
+                    duration: layer.duration
+                };
+            }),
             atmosphere: AllAtmospheres[Math.floor(Math.random() * (AllAtmospheres.length - 1))],
             year: Math.floor(Math.random() * (10 - 1) + 60),
             days: Math.floor(Math.random() * (50 - 1) + 15),
-            image: this.getImgPath("Planets", aPlanet.images[Math.floor(Math.random() * (aPlanet.images.length - 1))]),
-            surfaces: aPlanet.surfaces.map(surface => {
-                return {
-                    image: this.getImgPath("Surfaces", surface.image),
-                    color: surface.color
-                };
-            }),
             gravity: Math.ceil(Math.floor(Math.random() * (100 - 1) + 1) / 10) * 10,
             mass: Math.ceil(Math.floor(Math.random() * (400 - 1) + 1) / 10) * 10,
             diameter: Math.ceil(Math.floor(Math.random() * 30000) + 15000),

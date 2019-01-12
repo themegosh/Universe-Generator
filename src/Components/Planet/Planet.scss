@@ -1,4 +1,29 @@
 .planet-wrapper {
+    .outer-glow-wrapper {
+        animation: scaling 1s;
+        margin: 0 auto;
+
+        .outer-glow {
+            //????
+        }
+    }
+
+    .inner-glow-wrapper {
+        .inner-glow {
+        }
+    }
+
+    .outer-layer-wrapper {
+        .outer-layer {
+        }
+    }
+    .inner-layer-wrapper {
+        overflow: hidden;
+
+        .inner-layer {
+        }
+    }
+
     .gradient-wrapper {
         animation: scaling 1s;
         margin: 0 auto;

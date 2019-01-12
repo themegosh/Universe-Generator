@@ -1,21 +1,26 @@
 [
     {
         "name": "Cold Gas Giant",
-        "images": ["ColdGasGiantNOG-01.svg"],
-        "atmosphereColor": "#1baddb",
-        "surfaces": [
+        "surfaceImage": "ColdGasGiantNOG-01.svg",
+        "innerGlows": ["#1baddb"],
+        "innerLayers": [
             {
                 "image": "cloud1.svg",
-                "color": "#3399ff"
+                "color": "#3399ff",
+                "duration": 10
             },
             {
                 "image": "cloud2.svg",
-                "color": "#66cccc"
+                "color": "#66cccc",
+                "duration": 17
             },
             {
                 "image": "cloudwrap1.svg",
-                "color": "#fafafa"
+                "color": "#fafafa",
+                "duration": 17
             }
-        ]
+        ],
+        "outerGlows": ["#fff"],
+        "outerLayers": []
     }
 ]

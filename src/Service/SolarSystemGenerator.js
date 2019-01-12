@@ -27,6 +27,7 @@ export default class SolarSystemGenerator {
 
         return {
           name: aPlanet.name,
+          atmosphereColor: aPlanet.atmosphereColor,
           atmosphere:
             AllAtmospheres[Math.floor(Math.random() * (AllAtmospheres.length - 1))],
           year: Math.floor(Math.random() * (10 - 1) + 60),

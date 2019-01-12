@@ -2,6 +2,6 @@
     {
         "name": "Cold Gas Giant",
         "images": ["ColdGasGiantNOG-01.svg"],
-        "atmoColor": "#1baddb"
+        "atmosphereColor": "#1baddb"
     }
 ]

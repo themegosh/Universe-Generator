@@ -2,7 +2,6 @@
     {
         "name": "Orange Star",
         "images": ["OrangeStar.svg"],
-        "innerGlow": "#ff9d00",
         "outerGlow10010": "#ff8206",
         "outerGlow5020": "#ff9433"
     }

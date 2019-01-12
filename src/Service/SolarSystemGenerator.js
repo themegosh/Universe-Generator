@@ -26,18 +26,16 @@ export default class SolarSystemGenerator {
         //console.log("aPlanet", aPlanet);
 
         return {
-          name: aPlanet.name,
-          atmosphereColor: aPlanet.atmosphereColor,
-          atmosphere:
-            AllAtmospheres[Math.floor(Math.random() * (AllAtmospheres.length - 1))],
-          year: Math.floor(Math.random() * (10 - 1) + 60),
-          days: Math.floor(Math.random() * (50 - 1) + 15),
-          image:
-            this.getImgPath('Planets', aPlanet.images[Math.floor(Math.random() * (aPlanet.images.length - 1))]),
-          gravity: Math.ceil(Math.floor(Math.random() * (100 - 1) + 1) / 10) * 10,
-          mass: Math.ceil(Math.floor(Math.random() * (400 - 1) + 1) / 10) * 10,
-          diameter: Math.ceil(Math.floor(Math.random() * (100 - 1) + 1) / 10) * 10,
-          rotation: Math.ceil(Math.floor(Math.random() * (0-25) + (0)))
+            name: aPlanet.name,
+            atmosphereColor: aPlanet.atmosphereColor,
+            atmosphere: AllAtmospheres[Math.floor(Math.random() * (AllAtmospheres.length - 1))],
+            year: Math.floor(Math.random() * (10 - 1) + 60),
+            days: Math.floor(Math.random() * (50 - 1) + 15),
+            image: this.getImgPath("Planets", aPlanet.images[Math.floor(Math.random() * (aPlanet.images.length - 1))]),
+            gravity: Math.ceil(Math.floor(Math.random() * (100 - 1) + 1) / 10) * 10,
+            mass: Math.ceil(Math.floor(Math.random() * (400 - 1) + 1) / 10) * 10,
+            diameter: Math.ceil(Math.floor(Math.random() * (100 - 1) + 1) / 10) * 10,
+            rotation: Math.ceil(Math.floor(Math.random() * (0 - 25) + 0))
         };
     }
 
@@ -55,10 +53,10 @@ export default class SolarSystemGenerator {
         return {
             name: aStar.name,
             outerGlow10010: aStar.outerGlow10010,
-            innerGlow: aStar.innerGlow,
+            outerGlow5020: aStar.outerGlow5020,
             planets: planets,
             image: this.getImgPath("Stars", aStar.images[Math.floor(Math.random() * (aStar.images.length - 1))]),
-            diameter: Math.ceil(Math.floor(Math.random() * (100 - 1) + 1) / 10) * 20,
+            diameter: Math.ceil(Math.floor(Math.random() * (100 - 1) + 1) / 10) * 20
         };
     }
 

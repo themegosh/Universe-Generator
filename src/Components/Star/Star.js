@@ -5,15 +5,15 @@ import "./Star.scss";
 class Star extends Component {
     render() {
         let star = this.props.star;
+        var starImgStyle = {
+            width: `${star.diameter * 0.5 }em`
+          };
 
         return (
             <div className="star">
                 <div className="star-name">
-                    <img className="image" src={star.image} alt={star.name} />
+                    <img className="image" src={star.image} alt={star.name} style={starImgStyle} />
                 </div>
-                {star.planets.map((planet, key) => {
-                    return <Planet planet={planet} key={key} />;
-                })}
             </div>
         );
     }

@@ -7,7 +7,7 @@ class Planet extends Component {
         let planet = this.props.planet;
         var planetImgStyle = {
           transform: `rotate(${planet.rotation}deg)`,
-          width: `${planet.diameter * 10}px`
+          width: `${planet.diameter * 0.5 }em`
         };
         return (
             <div className="planet">

@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./SolarSystem.scss";
 import SolarSystemGenerator from "./../../Service/SolarSystemGenerator";
 import Star from "./../Star/Star";
+import Planet from "./../Planet/Planet";
 
 class SolarSystem extends Component {
     constructor(props) {
@@ -23,6 +24,10 @@ class SolarSystem extends Component {
             return (
                 <div className="solar-system">
                     <Star star={this.state.star} />
+                    
+                {this.state.star.planets.map((planet, key) => {
+                    return <Planet planet={planet} key={key} />;
+                })}
                 </div>
             );
         } else {

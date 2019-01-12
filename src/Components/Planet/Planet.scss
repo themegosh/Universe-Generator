@@ -5,27 +5,31 @@
     }
     .surface-wrapper {
         overflow: hidden;
-        .first-surface {
-            animation: surfaceanimation 3s infinite;
+        .surface {
+            .first {
+                animation: surfaceanimation 7s infinite;
+                position: absolute;
 
-            @keyframes surfaceanimation {
-                0% {
-                    transform: translateX(-100%);
-                }
-                100% {
-                    transform: translateX(100%);
+                @keyframes surfaceanimation {
+                    0% {
+                        transform: translateX(-150%);
+                    }
+                    100% {
+                        transform: translateX(50%);
+                    }
                 }
             }
-        }
-        .second-surface {
-            animation: secondsurfaceanimation 4s infinite;
+            .second {
+                position: absolute;
+                animation: secondsurfaceanimation 10s infinite;
 
-            @keyframes secondsurfaceanimation {
-                0% {
-                    transform: translateX(-200%);
-                }
-                100% {
-                    transform: translateX(100%);
+                @keyframes secondsurfaceanimation {
+                    0% {
+                        transform: translateX(-100%);
+                    }
+                    100% {
+                        transform: translateX(100%);
+                    }
                 }
             }
         }

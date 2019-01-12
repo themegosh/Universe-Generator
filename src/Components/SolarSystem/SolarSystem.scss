@@ -1,5 +1,10 @@
 .solar-system {
-  
+    .planet-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
     .fancy-button {
         background: transparent;
         border: 0;

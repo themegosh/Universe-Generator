@@ -5,12 +5,12 @@ class Star extends Component {
     render() {
         let star = this.props.star;
         var starImgStyle = {
-            width: `${star.diameter * 0.25}em`,
+            width: `${star.diameter}vw`,
             filter: `drop-shadow(0px 0px 100px ${star.outerGlow10010})`
         };
 
         return (
-            <div className="star">
+            <div className="planet-wrapper star">
                 <div className="star-name">
                     <img className="image" src={star.image} alt={star.name} style={starImgStyle} />
                 </div>

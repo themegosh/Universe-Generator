@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./Planet.scss";
+import ReactSVG from "react-svg";
 
 class Planet extends Component {
     render() {
@@ -20,8 +21,10 @@ class Planet extends Component {
                     <div className="gradient second" style={planetStyle} />
                     <div className="gradient third surface-wrapper" style={planetStyle}>
                         <div className="surface">
-                            <img src={planet.surface} className="first" alt={planet.name} />
-                            <img src={planet.surface} className="second" alt={planet.name} />
+                            <ReactSVG className="first" src={planet.surface} />
+                            <ReactSVG className="second" src={planet.surface} />
+                            {/* <img src={planet.surface} className="first" alt={planet.name} />
+                            <img src={planet.surface} className="second" alt={planet.name} /> */}
                         </div>
                     </div>
                 </div>

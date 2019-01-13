@@ -21,8 +21,7 @@ export default class SolarSystemGenerator {
     }
 
     generatePlanet() {
-        var aPlanet = AllPlanets[Math.floor(Math.random() * (AllPlanets.length - 1))];
-        //console.log("aPlanet", aPlanet);
+        let aPlanet = AllPlanets[Math.floor(Math.random() * AllPlanets.length)];
 
         return {
             name: aPlanet.name,

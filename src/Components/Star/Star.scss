@@ -1,8 +1,6 @@
 .star-wrapper {
-    position: absolute;
-    top: 30%;
-    left: 30%;
-    transform: translate(-50%, -50%);
+    position: relative;
+    margin: 0 auto;
 
     .star-name {
         font-size: 2vw;

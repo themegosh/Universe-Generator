@@ -7,19 +7,19 @@
             {
                 "image": "cloud1.svg",
                 "color": "#1d7bd8",
-                "duration": 10,
+                "duration": 30,
                 "width": "104%"
             },
             {
                 "image": "cloud2.svg",
                 "color": "#1d5bd8",
-                "duration": 10,
+                "duration": 30,
                 "width": "147%"
             },
             {
                 "image": "cloudwrap1.svg",
                 "color": "#66d7ff",
-                "duration": 20,
+                "duration": 40,
                 "width": "300%"
             }
         ],

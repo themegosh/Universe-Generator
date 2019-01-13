@@ -57,14 +57,20 @@ class Planet extends Component {
                                     zIndex: index,
                                     width: layer.width
                                 };
-                                return (
+                                return [
                                     <ReactSVG
                                         src={layer.image}
                                         className={`inner-layer layer-${index}`}
                                         key={index}
                                         style={innerLayerStyle}
+                                    />,
+                                    <ReactSVG
+                                        src={layer.image}
+                                        className={`inner-layer layer-${index}-offset`}
+                                        key={index}
+                                        style={innerLayerStyle}
                                     />
-                                );
+                                ];
                             })}
                         </div>
                     </div>

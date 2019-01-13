@@ -77,15 +77,29 @@
                     left: 0;
 
                     &.layer-0 {
-                        animation: planet-inner-layer-0 17s linear infinite;
+                        animation: planet-inner-layer 7s linear infinite;
+                    }
+
+                    &.layer-0-offset {
+                        animation: planet-inner-layer-offset 7s linear infinite;
+                        transform: translate(-100%);
                     }
 
                     &.layer-1 {
-                        animation: planet-inner-layer-1 20s linear infinite;
+                        animation: planet-inner-layer 10s linear infinite;
+                    }
+
+                    &.layer-1-offset {
+                        animation: planet-inner-layer-offset 10s linear infinite;
+                        transform: translate(-100%);
                     }
 
                     &.layer-2 {
-                        animation: planet-inner-layer-2 25s linear infinite;
+                        animation: planet-inner-layer 3s linear infinite;
+                    }
+                    &.layer-2-offset {
+                        animation: planet-inner-layer-offset 20s linear infinite;
+                        transform: translate(-300%);
                     }
                 }
             }
@@ -93,57 +107,19 @@
     }
 }
 
-@keyframes planet-inner-layer-0 {
+@keyframes planet-inner-layer {
     0% {
-        transform: translateX(25%);
-        opacity: 1;
-    }
-    50% {
-        transform: translateX(90%);
-    }
-    51% {
-        transform: translateX(-100%);
-        opacity: 0;
-    }
-    52% {
-        transform: translateX(-100%);
-    }
-    53% {
-        transform: translateX(-100%);
-        opacity: 1;
+        transform: translate(0%);
     }
     100% {
-        transform: translateX(90%);
+        transform: translateX(100%);
     }
 }
-@keyframes planet-inner-layer-1 {
+@keyframes planet-inner-layer-offset {
     0% {
-        transform: translateX(-100%);
+        transform: translate(-100%);
     }
     100% {
-        transform: translateX(50%);
-    }
-}
-@keyframes planet-inner-layer-2 {
-    0% {
-        transform: translateX(5%);
-        opacity: 1;
-    }
-    50% {
-        transform: translateX(30%);
-    }
-    51% {
-        transform: translateX(-100%);
-        opacity: 0;
-    }
-    52% {
-        transform: translateX(-100%);
-    }
-    53% {
-        transform: translateX(-100%);
-        opacity: 1;
-    }
-    100% {
-        transform: translateX(30%);
+        transform: translateX(0%);
     }
 }

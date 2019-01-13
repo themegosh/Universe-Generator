@@ -1,15 +1,6 @@
 .solar-system {
     display: flex;
     flex-direction: column;
-
-    .nav-buttons {
-        position: fixed;
-        top: 15px;
-        left: 15px;
-    }
-    .fancy-button {
-        margin-right: 15px;
-    }
 }
 @keyframes orbit-right {
     0% {

@@ -2,29 +2,62 @@
     display: flex;
     flex-direction: column;
 
-    .nav-buttons {
-        position: fixed;
-        top: 15px;
-        left: 15px;
-    }
-    .fancy-button {
-        margin-right: 15px;
+    &.orbit {
+        .orbit-wrapper {
+            .star-wrapper {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+            }
+            .planet-orbit-wrapper {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                -webkit-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+                .planet-orbit {
+                    border: solid 1px rgba(33, 150, 243, 0.8);
+                    position: relative;
+                    padding: 0;
+                    border-radius: 50%;
+                    list-style: none;
+                    box-sizing: content-box;
+                    width: 25em;
+                    height: 25em;
+                    animation: clockwiseRotate 35s linear infinite;
+                    .planet-wrapper {
+                        display: block;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        width: 1.6em;
+                        height: 1.6em;
+                        margin: -0.8em;
+                        transform: rotate(95deg) translate(17.5em) rotate(-95deg);
+                        .planet {
+                            animation: counterClockwiseRotate 35s linear infinite;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
-@keyframes orbit-right {
-    0% {
+@keyframes clockwiseRotate {
+    from {
         transform: rotate(0deg);
     }
-    100% {
+    to {
         transform: rotate(360deg);
     }
 }
 
-@keyframes orbit-left {
+@keyframes counterClockwiseRotate {
     0% {
-        transform: rotate(360deg);
+        transform: rotate(0deg);
     }
     100% {
-        transform: rotate(0deg);
+        transform: rotate(-360deg);
     }
 }

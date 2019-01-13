@@ -25,5 +25,32 @@
         ],
         "outerGlows": ["#3399cc"],
         "outerLayers": []
+    },
+    {
+        "name": "Tropical World",
+        "surfaceImage": "base_tropical.svg",
+        "innerGlows": ["#a8efef"],
+        "innerLayers": [
+            {
+                "image": "innerlayer-03.svg",
+                "color": "#75aa4d",
+                "duration": 30,
+                "width": "285%"
+            },
+            {
+                "image": "innerlayer-04.svg",
+                "color": "#75aa4d",
+                "duration": 30,
+                "width": "285%"
+            },
+            {
+                "image": "cloudwrap2.svg",
+                "color": "#66d7ff",
+                "duration": 40,
+                "width": "300%"
+            }
+        ],
+        "outerGlows": ["#a8efef"],
+        "outerLayers": []
     }
 ]

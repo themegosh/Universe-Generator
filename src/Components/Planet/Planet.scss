@@ -77,10 +77,12 @@
                 }
 
                 &.layer-1 {
+                    animation-delay: 10s;
                     animation: planet-inner-layer 10s linear infinite;
                 }
 
                 &.layer-1-offset {
+                    animation-delay: 10s;
                     animation: planet-inner-layer-offset 10s linear infinite;
                     transform: translate(-100%);
                 }

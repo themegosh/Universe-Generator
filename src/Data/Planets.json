@@ -13,13 +13,13 @@
             {
                 "image": "innerlayer-02.svg",
                 "color": "#1d5bd8",
-                "duration": 30,
+                "duration": 35,
                 "width": "285%"
             },
             {
                 "image": "cloudwrap1.svg",
                 "color": "#66d7ff",
-                "duration": 40,
+                "duration": 25,
                 "width": "300%"
             }
         ],
@@ -32,25 +32,88 @@
         "innerGlows": ["#a8efef"],
         "innerLayers": [
             {
-                "image": "innerlayer-03.svg",
+                "image": "innerlayer-07.svg",
                 "color": "#75aa4d",
                 "duration": 30,
                 "width": "285%"
             },
             {
+                "image": "cloudwrap3.svg",
+                "color": "#fafafa",
+                "duration": 20,
+                "width": "288%"
+            }
+        ],
+        "outerGlows": ["#a8efef"],
+        "outerLayers": []
+    },
+    {
+        "name": "Desert World",
+        "surfaceImage": "base_desert.svg",
+        "innerGlows": ["#e5d07a"],
+        "innerLayers": [
+            {
                 "image": "innerlayer-04.svg",
-                "color": "#75aa4d",
+                "color": "#c1b272",
+                "duration": 30,
+                "width": "285%"
+            },
+            {
+                "image": "cloudwrap4.svg",
+                "color": "#fafafa",
+                "duration": 25,
+                "width": "290%"
+            }
+        ],
+        "outerGlows": ["#e5d07a"],
+        "outerLayers": []
+    },
+    {
+        "name": "Molten World",
+        "surfaceImage": "base_molten.svg",
+        "innerGlows": ["#ea3200"],
+        "innerLayers": [
+            {
+                "image": "innerlayer-10.svg",
+                "color": "#ea3200",
+                "duration": 30,
+                "width": "285%"
+            },
+            {
+                "image": "innerlayer-07.svg",
+                "color": "#ea3200",
+                "duration": 30,
+                "width": "285%"
+            },
+            {
+                "image": "cloudwrap3.svg",
+                "color": "#333",
+                "duration": 20,
+                "width": "287%"
+            }
+        ],
+        "outerGlows": ["#ea3200"],
+        "outerLayers": []
+    },
+    {
+        "name": "Crystal World",
+        "surfaceImage": "base_crystal.svg",
+        "innerGlows": ["#dc81ef"],
+        "innerLayers": [
+            {
+                "image": "innerlayer-05.svg",
+                "color": "#6bb597",
                 "duration": 30,
                 "width": "285%"
             },
             {
                 "image": "cloudwrap2.svg",
-                "color": "#fafafa",
-                "duration": 40,
+                "color": "#efbbfc",
+                "duration": 20,
                 "width": "268%"
             }
         ],
-        "outerGlows": ["#a8efef"],
+        "outerGlows": ["#dc81ef"],
         "outerLayers": []
     }
 ]

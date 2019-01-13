@@ -20,10 +20,64 @@
                 "image": "cloudwrap1.svg",
                 "color": "#66d7ff",
                 "duration": 25,
-                "width": "300%"
+                "width": "285%"
             }
         ],
         "outerGlows": ["#3399cc"],
+        "outerLayers": []
+    },
+    {
+        "name": "Hot Gas Giant",
+        "surfaceImage": "base_hotgasgiant.svg",
+        "innerGlows": ["#d31111"],
+        "innerLayers": [
+            {
+                "image": "innerlayer-11.svg",
+                "color": "#d31111",
+                "duration": 30,
+                "width": "285%"
+            },
+            {
+                "image": "innerlayer-12.svg",
+                "color": "#b7000e",
+                "duration": 35,
+                "width": "285%"
+            },
+            {
+                "image": "cloudwrap4.svg",
+                "color": "#990000",
+                "duration": 25,
+                "width": "285%"
+            }
+        ],
+        "outerGlows": ["#d31111"],
+        "outerLayers": []
+    },
+    {
+        "name": "Gas Giant",
+        "surfaceImage": "base_gasgiant.svg",
+        "innerGlows": ["#dda026"],
+        "innerLayers": [
+            {
+                "image": "innerlayer-10.svg",
+                "color": "#e07e12",
+                "duration": 30,
+                "width": "285%"
+            },
+            {
+                "image": "innerlayer-06.svg",
+                "color": "#dda026",
+                "duration": 35,
+                "width": "285%"
+            },
+            {
+                "image": "cloudwrap1.svg",
+                "color": "#f7c56b",
+                "duration": 25,
+                "width": "285%"
+            }
+        ],
+        "outerGlows": ["#dda026"],
         "outerLayers": []
     },
     {
@@ -41,7 +95,7 @@
                 "image": "cloudwrap3.svg",
                 "color": "#fafafa",
                 "duration": 20,
-                "width": "288%"
+                "width": "285%"
             }
         ],
         "outerGlows": ["#a8efef"],
@@ -59,10 +113,10 @@
                 "width": "285%"
             },
             {
-                "image": "cloudwrap4.svg",
+                "image": "cloudwrap2.svg",
                 "color": "#fafafa",
                 "duration": 25,
-                "width": "290%"
+                "width": "285%"
             }
         ],
         "outerGlows": ["#e5d07a"],
@@ -86,13 +140,82 @@
                 "width": "285%"
             },
             {
-                "image": "cloudwrap3.svg",
+                "image": "cloudwrap4.svg",
                 "color": "#333",
                 "duration": 20,
                 "width": "287%"
             }
         ],
         "outerGlows": ["#ea3200"],
+        "outerLayers": []
+    },
+    {
+        "name": "Ice World",
+        "surfaceImage": "base_ice.svg",
+        "innerGlows": ["#aeeeff"],
+        "innerLayers": [
+            {
+                "image": "innerlayer-09.svg",
+                "color": "#9ed6e5",
+                "duration": 30,
+                "width": "285%"
+            },
+            {
+                "image": "cloudwrap5.svg",
+                "color": "#fafafa",
+                "duration": 25,
+                "width": "285%"
+            }
+        ],
+        "outerGlows": ["#aeeeff"],
+        "outerLayers": []
+    },
+    {
+        "name": "Forest World",
+        "surfaceImage": "base_forest.svg",
+        "innerGlows": ["#358c26"],
+        "innerLayers": [
+            {
+                "image": "innerlayer-10.svg",
+                "color": "#256032",
+                "duration": 30,
+                "width": "285%"
+            },
+            {
+                "image": "cloudwrap3.svg",
+                "color": "#fafafa",
+                "duration": 20,
+                "width": "285%"
+            }
+        ],
+        "outerGlows": ["#358c26"],
+        "outerLayers": []
+    },
+    {
+        "name": "Toxic World",
+        "surfaceImage": "base_toxic.svg",
+        "innerGlows": ["#6c8c53"],
+        "innerLayers": [
+            {
+                "image": "innerlayer-03.svg",
+                "color": "#6e8751",
+                "duration": 30,
+                "width": "285%"
+            },
+            {
+                "image": "innerlayer-09.svg",
+                "color": "#6c8c53",
+                "duration": 30,
+                "width": "285%"
+            },
+            {
+                "image": "cloudwrap5.svg",
+                "color": "#49593a",
+                "duration": 20,
+                "width": "287%"
+            }
+        ],
+        "outerGlows": ["#6c8c53"],
         "outerLayers": []
     },
     {
@@ -107,10 +230,10 @@
                 "width": "285%"
             },
             {
-                "image": "cloudwrap2.svg",
+                "image": "cloudwrap4.svg",
                 "color": "#efbbfc",
                 "duration": 20,
-                "width": "267%"
+                "width": "285%"
             }
         ],
         "outerGlows": ["#dc81ef"],

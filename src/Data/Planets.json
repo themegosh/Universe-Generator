@@ -45,9 +45,9 @@
             },
             {
                 "image": "cloudwrap2.svg",
-                "color": "#66d7ff",
+                "color": "#fafafa",
                 "duration": 40,
-                "width": "300%"
+                "width": "268%"
             }
         ],
         "outerGlows": ["#a8efef"],

@@ -49,7 +49,7 @@ export default class SolarSystemGenerator {
             days: Math.floor(Math.random() * (50 - 1) + 15),
             gravity: Math.ceil(Math.floor(Math.random() * (100 - 1) + 1) / 10) * 10,
             mass: Math.ceil(Math.floor(Math.random() * (400 - 1) + 1) / 10) * 10,
-            diameter: Math.ceil(Math.floor(Math.random() * 20000) + 15000),
+            diameter: Math.ceil(Math.floor(Math.random() * 10000) + 7000),
             rotation: Math.ceil(Math.floor(Math.random() * (0 - 25) + 0))
         };
     }

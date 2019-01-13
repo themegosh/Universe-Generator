@@ -31,7 +31,7 @@ class SolarSystem extends Component {
                 <div className={`solar-system ${this.state.mode}`}>
                     <div className="nav-buttons">
                         <FancyButton onClick={this.btnGenerateSolarSystem}>Regenerate</FancyButton>
-                        <FancyButton onClick={this.btnSwapMode}>Orbit</FancyButton>
+                        {/* <FancyButton onClick={this.btnSwapMode}>Orbit</FancyButton> */}
                     </div>
                     <Star star={this.state.star} />
                     <div className="planet-orbit">

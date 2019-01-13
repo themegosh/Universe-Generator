@@ -238,5 +238,32 @@
         ],
         "outerGlows": ["#dc81ef"],
         "outerLayers": []
+    },
+    {
+        "name": "Ocean World",
+        "surfaceImage": "base_ocean.svg",
+        "innerGlows": ["#f2f2f2"],
+        "innerLayers": [
+            {
+                "image": "innerlayer-04.svg",
+                "color": "#2a93f2",
+                "duration": 30,
+                "width": "285%"
+            },
+            {
+                "image": "innerlayer-09.svg",
+                "color": "#2a93f2",
+                "duration": 30,
+                "width": "285%"
+            },
+            {
+                "image": "cloudwrap4.svg",
+                "color": "#fafafa",
+                "duration": 20,
+                "width": "287%"
+            }
+        ],
+        "outerGlows": ["#2a93f2"],
+        "outerLayers": []
     }
 ]

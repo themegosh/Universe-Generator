@@ -28,12 +28,9 @@
                     .planet-wrapper {
                         display: block;
                         position: absolute;
-                        top: 50%;
-                        left: 50%;
-                        width: 1.6em;
-                        height: 1.6em;
+                        top: 0;
+                        left: 0;
                         margin: -0.8em;
-                        transform: rotate(95deg) translate(17.5em) rotate(-95deg);
                         .planet {
                             animation: counterClockwiseRotate 35s linear infinite;
                         }

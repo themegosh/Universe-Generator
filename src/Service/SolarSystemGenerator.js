@@ -45,13 +45,12 @@ export default class SolarSystemGenerator {
                 };
             }),
             atmosphere: AllAtmospheres[Math.floor(Math.random() * (AllAtmospheres.length - 1))],
-            year: Math.floor(Math.random() * (40 - 1) + 30),
+            year: Math.floor(Math.random() * (100 - 1) + 30),
             days: Math.floor(Math.random() * (50 - 1) + 15),
             gravity: Math.ceil(Math.floor(Math.random() * (100 - 1) + 1) / 10) * 10,
             mass: Math.ceil(Math.floor(Math.random() * (400 - 1) + 1) / 10) * 10,
             diameter: Math.ceil(Math.floor(Math.random() * 5000) + 3000),
-            rotation: Math.ceil(Math.floor(Math.random() * (0 - 25) + 0)),
-            orbit: Math.ceil(Math.floor(Math.random() * 380))
+            rotation: Math.ceil(Math.floor(Math.random() * (0 - 25) + 0))
         };
     }
 
@@ -60,7 +59,7 @@ export default class SolarSystemGenerator {
 
         var planets = [];
 
-        for (var i = 0; i < 5; i++) {
+        for (var i = 0; i < Math.floor(Math.random() * 7 + 4); i++) {
             planets.push(this.generatePlanet());
         }
 

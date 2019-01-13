@@ -8,7 +8,7 @@ class Planet extends Component {
         let planetSize = {
             width: `${planet.diameter / 1000}em`,
             height: `${planet.diameter / 1000}em`,
-            transform: `rotate(${planet.orbit}deg) translate(12.5em) rotate(-${planet.orbit}deg)`
+            transform: `rotate(${planet.degrees}deg) translate(12.5em) rotate(-${planet.degrees}deg)`
             //transform: `rotate(${planet.rotation}deg)`
             //filter: `drop-shadow(0px 0px 10px ${planet.atmosphereColor})`
         };

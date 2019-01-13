@@ -1,4 +1,7 @@
 .solar-system {
+    display: flex;
+    flex-direction: column;
+
     .nav-buttons {
         position: fixed;
         top: 15px;
@@ -9,25 +12,33 @@
     }
 
     .star-wrapper {
-        position: absolute;
+        position: relative;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
     }
 
-    .planet-orbit {
-        position: absolute;
+    .planet-wrapper {
+        position: relative;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        padding-right: 50px;
-        animation: spin-right 10s linear infinite;
-    }
-    .planet-container {
     }
 }
-@-webkit-keyframes orbit-right {
+@keyframes orbit-right {
+    0% {
+        transform: rotate(0deg);
+    }
     100% {
         transform: rotate(360deg);
+    }
+}
+
+@keyframes orbit-left {
+    0% {
+        transform: rotate(360deg);
+    }
+    100% {
+        transform: rotate(0deg);
     }
 }

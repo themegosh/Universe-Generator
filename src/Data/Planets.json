@@ -5,16 +5,16 @@
         "innerGlows": ["#1baddb"],
         "innerLayers": [
             {
-                "image": "cloud1.svg",
+                "image": "innerlayer-01.svg",
                 "color": "#1d7bd8",
                 "duration": 30,
-                "width": "104%"
+                "width": "285%"
             },
             {
-                "image": "cloud2.svg",
+                "image": "innerlayer-02.svg",
                 "color": "#1d5bd8",
                 "duration": 30,
-                "width": "147%"
+                "width": "285%"
             },
             {
                 "image": "cloudwrap1.svg",

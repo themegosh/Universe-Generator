@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./Star.scss";
+import ReactSVG from "react-svg";
 
 class Star extends Component {
     render() {
@@ -10,9 +11,9 @@ class Star extends Component {
         };
 
         return (
-            <div className="planet-wrapper star">
+            <div className="star-wrapper">
                 <div className="star-name">
-                    <img className="image" src={star.image} alt={star.name} style={starImgStyle} />
+                    <ReactSVG src={star.image} className={`image`} style={starImgStyle} />
                 </div>
             </div>
         );

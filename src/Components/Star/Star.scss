@@ -1,10 +1,8 @@
-.star {
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
+.star-wrapper {
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    transform: translate(-50%, -50%);
 
     .star-name {
         font-size: 2vw;

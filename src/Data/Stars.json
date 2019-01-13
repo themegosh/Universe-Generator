@@ -1,7 +1,8 @@
 [
     {
         "name": "Orange Star",
-        "images": ["OrangeStar.svg"],
+        "images": ["base_orangestar.svg"],
+        "outerGlow": "#ff8206",
         "outerGlow10010": "#ff8206",
         "outerGlow5020": "#ff9433"
     }

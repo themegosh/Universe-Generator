@@ -32,7 +32,8 @@ export default class SolarSystemGenerator {
                 return {
                     image: this.getImgPath("InnerLayers", layer.image),
                     color: layer.color,
-                    duration: layer.duration
+                    duration: layer.duration,
+                    width: layer.width
                 };
             }),
             outerGlows: aPlanet.outerGlows.slice(),
@@ -40,7 +41,8 @@ export default class SolarSystemGenerator {
                 return {
                     image: this.getImgPath("OuterLayers", layer.image),
                     color: layer.color,
-                    duration: layer.duration
+                    duration: layer.duration,
+                    width: layer.width
                 };
             }),
             atmosphere: AllAtmospheres[Math.floor(Math.random() * (AllAtmospheres.length - 1))],
@@ -58,7 +60,7 @@ export default class SolarSystemGenerator {
 
         var planets = [];
 
-        for (var i = 0; i < 5; i++) {
+        for (var i = 0; i < 1; i++) {
             planets.push(this.generatePlanet());
         }
 

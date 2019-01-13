@@ -5,6 +5,7 @@ import ReactSVG from "react-svg";
 class Star extends Component {
     render() {
         let star = this.props.star;
+
         var starImgStyle = {
             width: `${star.diameter}vw`
         };

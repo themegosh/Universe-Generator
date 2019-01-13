@@ -45,12 +45,13 @@ export default class SolarSystemGenerator {
                 };
             }),
             atmosphere: AllAtmospheres[Math.floor(Math.random() * (AllAtmospheres.length - 1))],
-            year: Math.floor(Math.random() * (10 - 1) + 60),
+            year: Math.floor(Math.random() * (40 - 1) + 30),
             days: Math.floor(Math.random() * (50 - 1) + 15),
             gravity: Math.ceil(Math.floor(Math.random() * (100 - 1) + 1) / 10) * 10,
             mass: Math.ceil(Math.floor(Math.random() * (400 - 1) + 1) / 10) * 10,
-            diameter: Math.ceil(Math.floor(Math.random() * 10000) + 7000),
-            rotation: Math.ceil(Math.floor(Math.random() * (0 - 25) + 0))
+            diameter: Math.ceil(Math.floor(Math.random() * 5000) + 3000),
+            rotation: Math.ceil(Math.floor(Math.random() * (0 - 25) + 0)),
+            orbit: Math.ceil(Math.floor(Math.random() * 380))
         };
     }
 
@@ -76,6 +77,8 @@ export default class SolarSystemGenerator {
     }
 
     generateSolarSystem() {
-        return this.generateStar();
+        let solarSystem = this.generateStar();
+        console.log("solarSystem", solarSystem);
+        return solarSystem;
     }
 }

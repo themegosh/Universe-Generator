@@ -19,10 +19,6 @@ class App extends Component {
         console.log("swap mode!", this.state.layout);
     };
 
-    componentDidMount() {
-        this.btnGenerateSolarSystem();
-    }
-
     render() {
         let starFieldStyle = {
             backgroundImage: `url(${StarFieldIMG})`

@@ -10,7 +10,14 @@ class SolarSystem extends Component {
                 <div className="orbit-wrapper">
                     <Star star={this.props.star} />
                     {this.props.star.planets.map((planet, key) => {
-                        return <Planet planet={planet} key={key} />;
+                        let planetOrbitStyle = { width: `${planet.year / 2}em`, height: `${planet.year / 2}em` };
+                        return (
+                            <div className="planet-orbit-wrapper" key={key}>
+                                <div className="planet-orbit" style={planetOrbitStyle}>
+                                    <Planet planet={planet} />
+                                </div>
+                            </div>
+                        );
                     })}
                 </div>
             </div>

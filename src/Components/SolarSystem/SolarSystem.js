@@ -8,38 +8,44 @@ import FancyButton from "./../FancyButton/FancyButton";
 class SolarSystem extends Component {
     constructor(props) {
         super(props);
-        this.state = { star: null };
-
-        this.generateSolarSystem = this.generateSolarSystem.bind(this);
+        this.state = { star: null, mode: "orbit" };
     }
     componentDidMount() {
-        this.generateSolarSystem();
+        this.btnGenerateSolarSystem();
     }
 
-    generateSolarSystem(e) {
+    btnGenerateSolarSystem = e => {
         console.log("generating!");
         var result = new SolarSystemGenerator().generateSolarSystem();
         console.log("result", result);
         this.setState(state => ({ star: result }));
-    }
+    };
+
+    btnSwapMode = e => {
+        console.log("swap mode!", this.state.mode);
+    };
 
     render() {
         if (this.state.star) {
             return (
-                <div className="solar-system">
-                    <FancyButton onClick={this.generateSolarSystem}>Regenerate</FancyButton>
+                <div className={`solar-system ${this.state.mode}`}>
+                    <div className="nav-buttons">
+                        <FancyButton onClick={this.btnGenerateSolarSystem}>Regenerate</FancyButton>
+                        <FancyButton onClick={this.btnSwapMode}>Orbit</FancyButton>
+                    </div>
                     <Star star={this.state.star} />
-
-                    {this.state.star.planets.map((planet, key) => {
-                        return <Planet planet={planet} key={key} />;
-                    })}
+                    <div className="planet-orbit">
+                        {this.state.star.planets.map((planet, key) => {
+                            return <Planet planet={planet} key={key} />;
+                        })}
+                    </div>
                 </div>
             );
         } else {
             return (
                 <div className="solar-system">
                     <h2>Hey, want a Solar System?</h2>
-                    <FancyButton onClick={this.generateSolarSystem}>Regenerate</FancyButton>
+                    <FancyButton onClick={this.btnGenerateSolarSystem}>Regenerate</FancyButton>
                 </div>
             );
         }

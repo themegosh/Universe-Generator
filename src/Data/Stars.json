@@ -1,7 +1,32 @@
 [
     {
+        "name": "Red Star",
+        "images": ["redstar.svg"],
+        "outerGlow": ""
+    },
+    {
+        "name": "Orange Star",
+        "images": ["orangestar.svg"],
+        "outerGlow": ""
+    },
+    {
         "name": "Yellow Star",
-        "images": ["base_yellowstar.svg"],
+        "images": ["yellowstar.svg"],
+        "outerGlow": ""
+    },
+    {
+        "name": "Blue Star",
+        "images": ["bluestar.svg"],
+        "outerGlow": ""
+    },
+    {
+        "name": "White Star",
+        "images": ["whitestar.svg"],
+        "outerGlow": ""
+    },
+    {
+        "name": "Blach Hole",
+        "images": ["blackhole.svg"],
         "outerGlow": ""
     }
 ]

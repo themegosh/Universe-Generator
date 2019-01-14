@@ -45,7 +45,7 @@ export default class SolarSystemGenerator {
                 };
             }),
             atmosphere: AllAtmospheres[Math.floor(Math.random() * (AllAtmospheres.length - 1))],
-            year: Math.floor(Math.random() * (100 - 1) + 30),
+            year: Math.floor(Math.random() * (40 - 1) + 50),
             days: Math.floor(Math.random() * (50 - 1) + 15),
             gravity: Math.ceil(Math.floor(Math.random() * (100 - 1) + 1) / 10) * 10,
             mass: Math.ceil(Math.floor(Math.random() * (400 - 1) + 1) / 10) * 10,

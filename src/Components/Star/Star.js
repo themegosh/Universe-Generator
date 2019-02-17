@@ -12,7 +12,7 @@ class Star extends Component {
 
         return (
             <div className="star-wrapper">
-                <div className="star-name">
+                <div className="star">
                     <ReactSVG src={star.image} className={`image`} style={starImgStyle} />
                 </div>
             </div>

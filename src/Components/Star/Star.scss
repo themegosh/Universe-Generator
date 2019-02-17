@@ -2,13 +2,7 @@
     position: relative;
     margin: 0 auto;
 
-    .star-name {
-        font-size: 2vw;
-    }
-}
-
-@media (max-width: 800px) {
     .star {
-        flex-direction: column;
+        font-size: 2vw;
     }
 }

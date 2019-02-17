@@ -16,11 +16,12 @@ class SolarSystem extends Component {
         }
 
         return (
-            <div className={`solar-system ${this.props.layout}`}>
+            <div className={`solar-system ${this.props.layout} view-3d`}>
                 <Star star={this.props.star} />
                 {this.props.star.planets.map((planet, key) => {
                     let planetOrbitStyle = {
                         width: `${planet.year / 3}em`
+                        //height: `${planet.year / 3}em`
                     };
                     let orbitAngleStyle = {
                         transform: `translate(-50%, -50%) rotate(${planet.degrees}deg)`
@@ -30,7 +31,11 @@ class SolarSystem extends Component {
                             <div className="planet-orbit" style={planetOrbitStyle}>
                                 <div className="planet-position">
                                     <div className="planet-counter-rotation">
-                                        <Planet planet={planet} />
+                                        <div className="planet-inverter">
+                                            <div className="planet-facer">
+                                                <Planet planet={planet} />
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

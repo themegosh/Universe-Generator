@@ -24,7 +24,7 @@
                 list-style: none;
                 box-sizing: content-box;
                 outline: 1px dashed red;
-                animation: clockwiseRotate 55s linear infinite;
+                //animation: clockwiseRotate 55s linear infinite;
 
                 .planet-position {
                     display: block;
@@ -35,10 +35,64 @@
                     outline: 1px dashed orange;
 
                     .planet-counter-rotation {
-                        animation: counterClockwiseRotate 55s linear infinite;
+                        //animation: counterClockwiseRotate 55s linear infinite;
+                        .planet-inverter {
+                            outline: 1px dashed purple;
+                        }
+                        .planet-facer {
+                            outline: 1px dashed wheat;
+                        }
+                        .planet {
+                            outline: 1px dashed green;
+                        }
                     }
-                    .planet {
-                        outline: 1px dashed yellow;
+                }
+            }
+        }
+    }
+    &.view-3d {
+        transform: rotateX(75deg);
+        transform-style: preserve-3d;
+
+        .star-wrapper {
+            transform-style: preserve-3d;
+
+            .star {
+                transform-style: preserve-3d;
+                transform: rotateX(-90deg);
+            }
+        }
+        .planet-orbit-wrapper {
+            transform-style: preserve-3d;
+
+            .planet-orbit {
+                position: relative;
+                transform-style: preserve-3d;
+                transition-timing-function: ease-in-out;
+                animation-name: orbit;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
+                animation-duration: 55s;
+
+                .planet-position {
+                    transform-style: preserve-3d;
+                    animation-name: invert;
+                    animation-iteration-count: infinite;
+                    animation-timing-function: linear;
+                    animation-duration: 55s;
+
+                    .planet-counter-rotation {
+                        transform-style: preserve-3d;
+
+                        .planet-inverter {
+                            transform-style: preserve-3d;
+
+                            .planet-facer {
+                                //transform: rotateX(0deg);
+                                //transform: rotateX(-90deg);
+                                transform-style: preserve-3d;
+                            }
+                        }
                     }
                 }
             }
@@ -60,5 +114,34 @@
     }
     100% {
         transform: rotate(-360deg);
+    }
+}
+@keyframes orbit {
+    0% {
+        transform: rotateZ(0deg);
+    }
+
+    100% {
+        transform: rotateZ(-360deg);
+    }
+}
+
+@keyframes suborbit {
+    0% {
+        transform: rotateX(90deg) rotateZ(0deg);
+    }
+
+    100% {
+        transform: rotateX(90deg) rotateZ(-360deg);
+    }
+}
+
+@keyframes invert {
+    0% {
+        transform: rotateX(-90deg) rotateY(360deg) rotateZ(0deg);
+    }
+
+    100% {
+        transform: rotateX(-90deg) rotateY(0deg) rotateZ(0deg);
     }
 }

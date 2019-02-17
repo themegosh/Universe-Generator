@@ -25,9 +25,9 @@
                     border-radius: 50%;
                     list-style: none;
                     box-sizing: content-box;
-                    //animation: clockwiseRotate 55s linear infinite;
                     height: 1px;
                     outline: red dashed;
+                    animation: clockwiseRotate 55s linear infinite;
 
                     .planet-wrapper {
                         display: block;
@@ -36,8 +36,11 @@
                         top: 50%;
                         transform: translate(-50%, -50%);
                         outline: 1px dashed yellow;
-                        //animation: counterClockwiseRotate 55s linear infinite;
+                        //
 
+                        .planet-wrapper-animation {
+                            animation: counterClockwiseRotate 55s linear infinite;
+                        }
                         .planet {
                         }
                     }

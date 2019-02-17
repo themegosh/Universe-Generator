@@ -33,12 +33,13 @@
                         left: 0;
                         top: 50%;
                         transform: translate(-50%, -50%);
-                        outline: 1px dashed yellow;
+                        outline: 1px dashed orange;
 
                         .planet-wrapper-animation {
                             animation: counterClockwiseRotate 55s linear infinite;
                         }
                         .planet {
+                            outline: 1px dashed yellow;
                         }
                     }
                 }

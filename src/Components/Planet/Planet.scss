@@ -1,93 +1,90 @@
-.planet-wrapper {
+.planet {
     position: relative;
-    .planet {
-        position: relative;
+    height: 100%;
+    width: 100%;
+    .outer-glow-wrapper {
+        animation: scaling 1s;
+        position: absolute;
         height: 100%;
         width: 100%;
-        .outer-glow-wrapper {
-            animation: scaling 1s;
-            position: absolute;
-            height: 100%;
-            width: 100%;
 
-            .outer-glow {
-                position: absolute;
-                border-radius: 90%;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                height: 68%;
-                width: 68%;
-                background-color: #000;
-            }
-        }
-
-        .inner-glow-wrapper {
+        .outer-glow {
             position: absolute;
-            border-radius: 50%;
+            border-radius: 90%;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
+            height: 68%;
+            width: 68%;
+            background-color: #000;
         }
+    }
 
-        .outer-layer-wrapper {
+    .inner-glow-wrapper {
+        position: absolute;
+        border-radius: 50%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .outer-layer-wrapper {
+        position: absolute;
+        border-radius: 50%;
+        width: 100%;
+        height: 100%;
+    }
+
+    .surface-wrapper {
+        position: relative;
+        overflow: hidden;
+        border-radius: 50%;
+        width: 70%;
+        height: 70%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        .inner-layer-wrapper {
             position: absolute;
-            border-radius: 50%;
-            width: 100%;
             height: 100%;
-        }
+            width: 100%;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
 
-        .surface-wrapper {
-            position: relative;
-            overflow: hidden;
-            border-radius: 50%;
-            width: 70%;
-            height: 70%;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-
-            .inner-layer-wrapper {
+            .inner-layer {
                 position: absolute;
-                height: 100%;
-                width: 100%;
                 top: 0;
                 left: 0;
-                bottom: 0;
-                right: 0;
 
-                .inner-layer {
-                    position: absolute;
-                    top: 0;
-                    left: 0;
+                &.layer-0 {
+                    animation: planet-inner-layer 7s linear infinite;
+                }
 
-                    &.layer-0 {
-                        animation: planet-inner-layer 7s linear infinite;
-                    }
+                &.layer-0-offset {
+                    animation: planet-inner-layer-offset 7s linear infinite;
+                    transform: translate(-100%);
+                }
 
-                    &.layer-0-offset {
-                        animation: planet-inner-layer-offset 7s linear infinite;
-                        transform: translate(-100%);
-                    }
+                &.layer-1 {
+                    animation-delay: 10s;
+                    animation: planet-inner-layer 10s linear infinite;
+                }
 
-                    &.layer-1 {
-                        animation-delay: 10s;
-                        animation: planet-inner-layer 10s linear infinite;
-                    }
+                &.layer-1-offset {
+                    animation-delay: 10s;
+                    animation: planet-inner-layer-offset 10s linear infinite;
+                    transform: translate(-100%);
+                }
 
-                    &.layer-1-offset {
-                        animation-delay: 10s;
-                        animation: planet-inner-layer-offset 10s linear infinite;
-                        transform: translate(-100%);
-                    }
-
-                    &.layer-2 {
-                        animation: planet-inner-layer 3s linear infinite;
-                    }
-                    &.layer-2-offset {
-                        animation: planet-inner-layer-offset 20s linear infinite;
-                        transform: translate(-300%);
-                    }
+                &.layer-2 {
+                    animation: planet-inner-layer 3s linear infinite;
+                }
+                &.layer-2-offset {
+                    animation: planet-inner-layer-offset 20s linear infinite;
+                    transform: translate(-300%);
                 }
             }
         }

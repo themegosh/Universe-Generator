@@ -3,44 +3,42 @@
     flex-direction: column;
 
     &.orbit {
-        .orbit-wrapper {
-            .star-wrapper {
-                position: absolute;
-                left: 50%;
-                top: 50%;
-                transform: translate(-50%, -50%);
-            }
+        .star-wrapper {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
 
-            .planet-orbit-wrapper {
-                position: absolute;
-                left: 50%;
-                top: 50%;
-                -webkit-transform: translate(-50%, -50%);
-                transform: translate(-50%, -50%);
+        .planet-orbit-wrapper {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
 
-                .planet-orbit {
-                    position: relative;
-                    padding: 0;
-                    border-radius: 50%;
-                    list-style: none;
-                    box-sizing: content-box;
-                    outline: 1px dashed red;
-                    animation: clockwiseRotate 55s linear infinite;
+            .planet-orbit {
+                position: relative;
+                padding: 0;
+                border-radius: 50%;
+                list-style: none;
+                box-sizing: content-box;
+                outline: 1px dashed red;
+                animation: clockwiseRotate 55s linear infinite;
 
-                    .planet-wrapper {
-                        display: block;
-                        position: absolute;
-                        left: 0;
-                        top: 50%;
-                        transform: translate(-50%, -50%);
-                        outline: 1px dashed orange;
+                .planet-position {
+                    display: block;
+                    position: absolute;
+                    left: 0;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                    outline: 1px dashed orange;
 
-                        .planet-wrapper-animation {
-                            animation: counterClockwiseRotate 55s linear infinite;
-                        }
-                        .planet {
-                            outline: 1px dashed yellow;
-                        }
+                    .planet-counter-rotation {
+                        animation: counterClockwiseRotate 55s linear infinite;
+                    }
+                    .planet {
+                        outline: 1px dashed yellow;
                     }
                 }
             }

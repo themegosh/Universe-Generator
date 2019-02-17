@@ -17,24 +17,26 @@ class SolarSystem extends Component {
 
         return (
             <div className={`solar-system ${this.props.layout}`}>
-                <div className="orbit-wrapper">
-                    <Star star={this.props.star} />
-                    {this.props.star.planets.map((planet, key) => {
-                        let planetOrbitStyle = {
-                            width: `${planet.year / 3}em`
-                        };
-                        let planetOrbitWrapperStyle = {
-                            transform: `translate(-50%, -50%) rotate(${planet.degrees}deg)`
-                        };
-                        return (
-                            <div className="planet-orbit-wrapper" key={key} style={planetOrbitWrapperStyle}>
-                                <div className="planet-orbit" style={planetOrbitStyle}>
-                                    <Planet planet={planet} />
+                <Star star={this.props.star} />
+                {this.props.star.planets.map((planet, key) => {
+                    let planetOrbitStyle = {
+                        width: `${planet.year / 3}em`
+                    };
+                    let orbitAngleStyle = {
+                        transform: `translate(-50%, -50%) rotate(${planet.degrees}deg)`
+                    };
+                    return (
+                        <div className="planet-orbit-wrapper" key={key} style={orbitAngleStyle}>
+                            <div className="planet-orbit" style={planetOrbitStyle}>
+                                <div className="planet-position">
+                                    <div className="planet-counter-rotation">
+                                        <Planet planet={planet} />
+                                    </div>
                                 </div>
                             </div>
-                        );
-                    })}
-                </div>
+                        </div>
+                    );
+                })}
             </div>
         );
     }

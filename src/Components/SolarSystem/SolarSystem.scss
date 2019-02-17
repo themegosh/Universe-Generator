@@ -10,6 +10,7 @@
                 top: 50%;
                 transform: translate(-50%, -50%);
             }
+
             .planet-orbit-wrapper {
                 position: absolute;
                 left: 50%;
@@ -17,6 +18,7 @@
                 -webkit-transform: translate(-50%, -50%);
                 transform: translate(-50%, -50%);
                 outline: 1px dashed red;
+
                 .planet-orbit {
                     position: relative;
                     padding: 0;
@@ -24,8 +26,10 @@
                     list-style: none;
                     box-sizing: content-box;
                     width: 25em;
-                    height: 25em;
-                    animation: clockwiseRotate 55s linear infinite;
+                    //animation: clockwiseRotate 55s linear infinite;
+                    height: 1px;
+                    outline: red dashed;
+
                     .planet-wrapper {
                         display: block;
                         position: absolute;
@@ -33,7 +37,8 @@
                         left: 0;
                         margin: -0.8em;
                         //outline: 1px dashed blue;
-                        animation: counterClockwiseRotate 55s linear infinite;
+                        //animation: counterClockwiseRotate 55s linear infinite;
+
                         .planet {
                         }
                     }

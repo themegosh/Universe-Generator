@@ -55,11 +55,11 @@ export default class SolarSystemGenerator {
     }
 
     generateStar() {
-        var aStar = AllStars[Math.floor(Math.random() * (AllStars.length - 1))];
+        var aStar = AllStars[Math.floor(Math.random() * AllStars.length)];
 
         var planets = [];
 
-        for (var i = 0; i < Math.floor(Math.random() * 7 + 4); i++) {
+        for (var i = 0; i < Math.floor(Math.random() * 6 + 3); i++) {
             planets.push(this.generatePlanet());
         }
 

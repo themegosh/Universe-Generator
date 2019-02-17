@@ -59,7 +59,7 @@ export default class SolarSystemGenerator {
 
         var planets = [];
 
-        for (var i = 0; i < Math.floor(Math.random() * 6 + 3); i++) {
+        for (var i = 0; i < Math.floor(Math.random() * 6) + 3; i++) {
             planets.push(this.generatePlanet());
         }
 

@@ -16,7 +16,7 @@
                 top: 50%;
                 -webkit-transform: translate(-50%, -50%);
                 transform: translate(-50%, -50%);
-                //outline: 1px dashed red;
+                outline: 1px dashed red;
                 .planet-orbit {
                     position: relative;
                     padding: 0;
@@ -33,7 +33,7 @@
                         left: 0;
                         margin: -0.8em;
                         //outline: 1px dashed blue;
-                        animation: counterClockwiseRotate 35s linear infinite;
+                        animation: counterClockwiseRotate 55s linear infinite;
                         .planet {
                         }
                     }

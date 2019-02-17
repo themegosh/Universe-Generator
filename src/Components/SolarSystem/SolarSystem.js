@@ -21,8 +21,7 @@ class SolarSystem extends Component {
                     <Star star={this.props.star} />
                     {this.props.star.planets.map((planet, key) => {
                         let planetOrbitStyle = {
-                            width: `${planet.year / 3}em`,
-                            height: `${planet.year / 3}em`
+                            width: `${planet.year / 3}em`
                         };
                         let planetOrbitWrapperStyle = {
                             transform: `translate(-50%, -50%) rotate(${planet.degrees}deg)`

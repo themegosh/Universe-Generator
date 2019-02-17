@@ -55,7 +55,7 @@ export default class SolarSystemGenerator {
     }
 
     generateStar() {
-        var aStar = AllStars[Math.floor(Math.random() * (AllStars.length - 1))];
+        var aStar = AllStars[Math.floor(Math.random() * AllStars.length)];
 
         var planets = [];
 

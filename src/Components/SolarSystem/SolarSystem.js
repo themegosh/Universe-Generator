@@ -37,12 +37,13 @@ class SolarSystem extends Component {
                     <div className={`solar-system ${view3d ? "view-3d" : ""} `}>
                         {star.planets.map((planet, key) => {
                             const size = planet.year;
+                            const speed = planet.year;
                             let planetOrbitStyle = {
                                 width: `${size}em`,
                                 height: `${size}em`,
                                 marginTop: `-${size / 2}em`,
                                 marginLeft: `-${size / 2}em`,
-                                animationDuration: `${planet.year / 8}s`
+                                animationDuration: `${speed}s`
                             };
 
                             console.log("planetOrbitStyle", planetOrbitStyle);
@@ -50,7 +51,7 @@ class SolarSystem extends Component {
                                 left: `${planet.x}%`,
                                 top: `${planet.y}%`,
                                 zIndex: key + 1,
-                                animationDuration: `${planet.year / 8}s`
+                                animationDuration: `${speed}s`
                             };
                             return (
                                 <div className="planet-orbit" key={key} style={planetOrbitStyle}>

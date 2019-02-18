@@ -56,15 +56,17 @@ export default class SolarSystemGenerator {
 
     generateStar() {
         var aStar = AllStars[Math.floor(Math.random() * AllStars.length)];
+
         aStar.diameter = Math.ceil(Math.floor(Math.random() * 20) + 20);
         aStar.image = this.getImgPath("Stars", aStar.images[Math.floor(Math.random() * (aStar.images.length - 1))]);
 
+        //generate the planets
         aStar.planets = [];
-
         for (var i = 0; i < Math.floor(Math.random() * 6) + 3; i++) {
             aStar.planets.push(this.generatePlanet(aStar));
         }
 
+        //sort them by 'year'
         aStar.planets = aStar.planets.sort((a, b) => b.year - a.year);
 
         //console.log("afterPlanets", planets);

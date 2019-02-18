@@ -8,7 +8,6 @@ class Planet extends Component {
         const planetStyle = {
             width: `${planet.diameter / 1000}em`,
             height: `${planet.diameter / 1000}em`
-            //transform: `rotate(-${planet.degrees}deg)`
             //filter: `drop-shadow(0px 0px 10px ${planet.atmosphereColor})`
         };
 

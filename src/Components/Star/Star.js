@@ -1,23 +1,21 @@
-import React, { Component } from "react";
+import React from "react";
 import "./Star.scss";
 import ReactSVG from "react-svg";
 
-class Star extends Component {
-    render() {
-        let star = this.props.star;
+const Star = props => {
+    const { star } = props;
 
-        var starImgStyle = {
-            width: `${star.diameter}em`
-        };
+    var starImgStyle = {
+        width: `${star.diameter}em`
+    };
 
-        return (
-            <div className="star-wrapper">
-                <div className="star">
-                    <ReactSVG src={star.image} className={`image`} style={starImgStyle} />
-                </div>
+    return (
+        <div className="star-wrapper">
+            <div className="star">
+                <ReactSVG src={star.image} className={`image`} style={starImgStyle} />
             </div>
-        );
-    }
-}
+        </div>
+    );
+};
 
 export default Star;

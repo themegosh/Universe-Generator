@@ -7,7 +7,7 @@ class Star extends Component {
         let star = this.props.star;
 
         var starImgStyle = {
-            width: `${star.diameter}vw`
+            width: `${star.diameter}em`
         };
 
         return (

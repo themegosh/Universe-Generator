@@ -20,9 +20,9 @@ export default class SolarSystemGenerator {
         return null;
     }
 
-    generatePlanet() {
+    generatePlanet(aStar) {
         let aPlanet = AllPlanets[Math.floor(Math.random() * AllPlanets.length)];
-
+        console.log(aStar.diameter);
         return {
             name: aPlanet.name,
             surfaceImage: this.getImgPath("Planets", aPlanet.surfaceImage),
@@ -45,7 +45,7 @@ export default class SolarSystemGenerator {
                 };
             }),
             atmosphere: AllAtmospheres[Math.floor(Math.random() * (AllAtmospheres.length - 1))],
-            year: Math.floor(Math.random() * (40 - 1) + 50),
+            year: Math.floor(Math.random() * (40 - 1) + aStar.diameter),
             days: Math.floor(Math.random() * (50 - 1) + 15),
             gravity: Math.ceil(Math.floor(Math.random() * (100 - 1) + 1) / 10) * 10,
             mass: Math.ceil(Math.floor(Math.random() * (400 - 1) + 1) / 10) * 10,
@@ -56,23 +56,20 @@ export default class SolarSystemGenerator {
 
     generateStar() {
         var aStar = AllStars[Math.floor(Math.random() * AllStars.length)];
+        aStar.diameter = Math.ceil(Math.floor(Math.random() * 20) + 20);
+        aStar.image = this.getImgPath("Stars", aStar.images[Math.floor(Math.random() * (aStar.images.length - 1))]);
 
-        var planets = [];
+        aStar.planets = [];
 
         for (var i = 0; i < Math.floor(Math.random() * 6) + 3; i++) {
-            planets.push(this.generatePlanet());
+            aStar.planets.push(this.generatePlanet(aStar));
         }
+
+        aStar.planets = aStar.planets.sort((a, b) => b.year - a.year);
 
         //console.log("afterPlanets", planets);
 
-        return {
-            name: aStar.name,
-            outerGlow10010: aStar.outerGlow10010,
-            outerGlow5020: aStar.outerGlow5020,
-            planets: planets,
-            image: this.getImgPath("Stars", aStar.images[Math.floor(Math.random() * (aStar.images.length - 1))]),
-            diameter: Math.ceil(Math.floor(Math.random() * 20) + 20)
-        };
+        return aStar;
     }
 
     generateSolarSystem() {

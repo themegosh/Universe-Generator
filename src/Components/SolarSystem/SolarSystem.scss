@@ -1,104 +1,132 @@
-.solar-system {
-    display: flex;
-    flex-direction: column;
+.universe {
+    z-index: 1;
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
 
-    &.orbit {
-        .star-wrapper {
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-        }
+    * {
+        transform-style: preserve-3d;
+    }
 
-        .planet-orbit-wrapper {
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
+    .galaxy {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
 
-            .planet-orbit {
-                position: relative;
-                padding: 0;
-                border-radius: 50%;
-                list-style: none;
-                box-sizing: content-box;
-                outline: 1px dashed red;
-                //animation: clockwiseRotate 55s linear infinite;
+    .solar-system {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        transform-style: preserve-3d;
 
-                .planet-position {
-                    display: block;
-                    position: absolute;
-                    left: 0;
-                    top: 50%;
-                    transform: translate(-50%, -50%);
-                    outline: 1px dashed orange;
+        &.view-3d {
+            transform: rotateX(75deg);
+            transform-style: preserve-3d;
 
-                    .planet-counter-rotation {
-                        //animation: counterClockwiseRotate 55s linear infinite;
-                        .planet-inverter {
-                            outline: 1px dashed purple;
-                        }
-                        .planet-facer {
-                            outline: 1px dashed wheat;
-                        }
-                        .planet {
-                            outline: 1px dashed green;
-                        }
+            .star-wrapper {
+                transform-style: preserve-3d;
+
+                .star {
+                    transform-style: preserve-3d;
+                    transform: rotateX(-90deg);
+                }
+            }
+
+            .planet-orbit-wrapper {
+                transform-style: preserve-3d;
+            }
+
+            .planet-position {
+                transform-style: preserve-3d;
+                animation-name: invert;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
+                animation-duration: 55s;
+            }
+
+            .planet-counter-rotation {
+                transform-style: preserve-3d;
+
+                .planet-inverter {
+                    transform-style: preserve-3d;
+
+                    .planet-facer {
+                        //transform: rotateX(0deg);
+                        //transform: rotateX(-90deg);
+                        transform-style: preserve-3d;
                     }
                 }
             }
         }
     }
-    &.view-3d {
-        transform: rotateX(75deg);
+
+    .star-wrapper {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+    }
+
+    .planet-orbit-wrapper {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+    .planet-orbit {
+        // position: relative;
+        // padding: 0;
+        // border-radius: 50%;
+        // list-style: none;
+        // box-sizing: content-box;
+        // position: relative;
+        // transform-style: preserve-3d;
+        // transition-timing-function: ease-in-out;
+        // animation-name: orbit;
+        // animation-iteration-count: infinite;
+        // animation-timing-function: linear;
+        // animation-duration: 55s;
+        // border: 1px solid rgba(255, 255, 255, 0.8);
+        //outline: 1px dashed red;
+        //animation: clockwiseRotate 55s linear infinite;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 50%;
         transform-style: preserve-3d;
+        animation-name: orbit;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        animation-duration: 55s;
+    }
+    .planet-position {
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        //outline: 1px dashed orange;
 
-        .star-wrapper {
-            transform-style: preserve-3d;
-
-            .star {
-                transform-style: preserve-3d;
-                transform: rotateX(-90deg);
+        .planet-counter-rotation {
+            //animation: counterClockwiseRotate 55s linear infinite;
+            .planet-inverter {
+                //outline: 1px dashed purple;
             }
-        }
-        .planet-orbit-wrapper {
-            transform-style: preserve-3d;
-
-            .planet-orbit {
-                position: relative;
-                transform-style: preserve-3d;
-                transition-timing-function: ease-in-out;
-                animation-name: orbit;
-                animation-iteration-count: infinite;
-                animation-timing-function: linear;
-                animation-duration: 55s;
-
-                .planet-position {
-                    transform-style: preserve-3d;
-                    animation-name: invert;
-                    animation-iteration-count: infinite;
-                    animation-timing-function: linear;
-                    animation-duration: 55s;
-
-                    .planet-counter-rotation {
-                        transform-style: preserve-3d;
-
-                        .planet-inverter {
-                            transform-style: preserve-3d;
-
-                            .planet-facer {
-                                //transform: rotateX(0deg);
-                                //transform: rotateX(-90deg);
-                                transform-style: preserve-3d;
-                            }
-                        }
-                    }
-                }
+            .planet-facer {
+                //outline: 1px dashed wheat;
+            }
+            .planet {
+                //outline: 1px dashed green;
             }
         }
     }
 }
+
 @keyframes clockwiseRotate {
     from {
         transform: rotate(0deg);

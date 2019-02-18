@@ -5,17 +5,15 @@ import Planet from "./../Planet/Planet";
 
 class SolarSystem extends Component {
     render() {
-        const { star, layout } = this.props;
+        const { star, view3d } = this.props;
 
         let avgDegrees;
-        if (layout === "orbit") {
-            avgDegrees = 360 / star.planets.length;
-            let curDegrees = 0;
-            star.planets.forEach(planet => {
-                planet.degrees = curDegrees;
-                curDegrees += avgDegrees;
-            });
-        }
+        avgDegrees = 360 / star.planets.length;
+        let curDegrees = 0;
+        star.planets.forEach(planet => {
+            planet.degrees = curDegrees;
+            curDegrees += avgDegrees;
+        });
 
         var x0 = 40;
         var y0 = 40;
@@ -34,36 +32,43 @@ class SolarSystem extends Component {
         }
 
         return (
-            <div className={`solar-system ${layout} view-3d`}>
-                <Star star={star} />
-                {star.planets.map((planet, key) => {
-                    let planetOrbitStyle = {
-                        width: `${planet.year / 3}em`,
-                        height: `${planet.year / 3}em`
-                    };
-                    const planetPositionStyle = {
-                        left: `${planet.x}%`,
-                        top: `${planet.y}%`
-                    };
-                    let orbitAngleStyle = {
-                        //transform: `translate(-50%, -50%) rotate(${planet.degrees}deg)`
-                    };
-                    return (
-                        <div className="planet-orbit-wrapper" key={key} style={orbitAngleStyle}>
-                            <div className="planet-orbit" style={planetOrbitStyle}>
-                                <div className="planet-position" style={planetPositionStyle}>
-                                    <div className="planet-counter-rotation">
-                                        <div className="planet-inverter">
-                                            <div className="planet-facer">
-                                                <Planet planet={planet} />
+            <div className="universe">
+                <div className="galaxy">
+                    <div className={`solar-system ${view3d ? "view-3d" : ""} `}>
+                        {star.planets.map((planet, key) => {
+                            const size = planet.year;
+                            let planetOrbitStyle = {
+                                width: `${size}em`,
+                                height: `${size}em`,
+                                marginTop: `-${size / 2}em`,
+                                marginLeft: `-${size / 2}em`,
+                                animationDuration: `${planet.year / 8}s`
+                            };
+
+                            console.log("planetOrbitStyle", planetOrbitStyle);
+                            const planetPositionStyle = {
+                                left: `${planet.x}%`,
+                                top: `${planet.y}%`,
+                                zIndex: key + 1,
+                                animationDuration: `${planet.year / 8}s`
+                            };
+                            return (
+                                <div className="planet-orbit" key={key} style={planetOrbitStyle}>
+                                    <div className="planet-position" style={planetPositionStyle}>
+                                        <div className="planet-counter-rotation">
+                                            <div className="planet-inverter">
+                                                <div className="planet-facer">
+                                                    <Planet planet={planet} />
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                    );
-                })}
+                            );
+                        })}
+                        <Star star={star} />
+                    </div>
+                </div>
             </div>
         );
     }
